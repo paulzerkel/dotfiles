@@ -7,39 +7,47 @@ set sc 				"Show incomplete commands
 set vb 				"ding! visual bell
 set wmnu 			"wild menu
 set ai				"auto indent
+set list			"show whitespace
 set smartindent
 set nocindent
 set go=aAce		"gui options
 
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
-	set t_Co=256
+		set t_Co=256
 endif
 
 "key remapping
 imap jj <Esc>
-map <Leader>t :NERDTreeToggle<CR>
 
-"Vundle stuff
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'pangloss/vim-javascript'
-Bundle 'goatslacker/mango.vim'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'scrooloose/syntastic'
-Bundle 'ap/vim-css-color'
-Bundle 'wavded/vim-stylus'
-Bundle 'scrooloose/nerdtree'
-Bundle 'gregsexton/MatchTag'
+Plugin 'VundleVim/Vundle.vim'
 
-set background=dark
-syntax on
-color mango
+Plugin 'tpope/vim-sensible'
+Plugin 'pangloss/vim-javascript'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ap/vim-css-color'
+Plugin 'helino/vim-json'
 
+call vundle#end()
 filetype plugin indent on
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
-let g:html_indent_inctags = "html,body,head,tbody"
-let g:html_indent_script1 = "inc"
-let g:html_indent_style1 = "inc"
+syntax enable
+set background=dark
+colorscheme solarized
+
+runtime! plugin/sensible
+set listchars=tab:»\ ,trail:·,extends:>,precedes:<,nbsp:+,eol:¬
