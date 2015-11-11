@@ -11,14 +11,16 @@ set list			"show whitespace
 set smartindent
 set nocindent
 set go=aAce		"gui options
+set mouse=a		"because i like mousewheel scrolling
 
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
-		set t_Co=256
+	set t_Co=256
 endif
 
 "key remapping
 imap jj <Esc>
 
+"start vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -30,6 +32,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ap/vim-css-color'
 Plugin 'helino/vim-json'
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -47,7 +50,7 @@ filetype plugin indent on
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme base16-solarized
 
 runtime! plugin/sensible
 set listchars=tab:»\ ,trail:·,extends:>,precedes:<,nbsp:+,eol:¬
