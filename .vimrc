@@ -2,16 +2,17 @@ set nocompatible
 set ls=2
 set tabstop=2
 set shiftwidth=2
-set ru 				"Set the ruler on
-set sc 				"Show incomplete commands
-set vb 				"ding! visual bell
-set wmnu 			"wild menu
+set ru				"Set the ruler on
+set sc				"Show incomplete commands
+set vb				"ding! visual bell
+set wmnu			"wild menu
 set ai				"auto indent
-set list			"show whitespace
 set smartindent
 set nocindent
 set go=aAce		"gui options
 set mouse=a		"because i like mousewheel scrolling
+set number		"show line numbers
+set list			"show whitespace
 
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
 	set t_Co=256
@@ -51,6 +52,7 @@ filetype plugin indent on
 syntax enable
 set background=dark
 colorscheme base16-solarized
+highlight SpecialKey term=underline ctermfg=8 ctermbg=10 guifg=#657b83 guibg=#073642
+set listchars=tab:»\ ,trail:·
 
 runtime! plugin/sensible
-set listchars=tab:»\ ,trail:·,extends:>,precedes:<,nbsp:+,eol:¬
