@@ -34,6 +34,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ap/vim-css-color'
 Plugin 'helino/vim-json'
 Plugin 'chriskempson/base16-vim'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
 filetype plugin indent on
