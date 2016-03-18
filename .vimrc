@@ -35,6 +35,8 @@ Plugin 'ap/vim-css-color'
 Plugin 'helino/vim-json'
 Plugin 'chriskempson/base16-vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'scrooloose/syntastic'
+Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -55,5 +57,16 @@ set background=dark
 colorscheme base16-solarized
 highlight SpecialKey term=underline ctermfg=8 ctermbg=10 guifg=#657b83 guibg=#073642
 set listchars=tab:»\ ,trail:·
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
 
 runtime! plugin/sensible
