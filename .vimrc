@@ -1,21 +1,25 @@
 set nocompatible
 set ls=2
-set ru        "Set the ruler on
-set sc        "Show incomplete commands
-set vb        "ding! visual bell
-set wmnu      "wild menu
-set ai        "auto indent
-set smartindent
-set nocindent
-set go=aAce   "gui options
-set mouse=a   "because i like mousewheel scrolling
-set number    "show line numbers
-set list      "show whitespace
+set ru                  " Set the ruler on
+set sc                  " Show incomplete commands
+set vb                  " ding! visual bell
+set wmnu                " wild menu
+set go=aAce             " gui options
+set mouse=a             " because i like mousewheel scrolling
+set number              " show line numbers
+set list                " show whitespace
 
 " just tab things
-set tabstop=2
-set shiftwidth=2
-set expandtab
+set smartindent
+set autoindent          " auto indent
+set tabstop=2           " two spaces
+set shiftwidth=2        " two spaces
+set expandtab           " lets use spaces instead of tabs
+set smarttab            " handle backspacing tabs
+
+set clipboard=unnamed   " use the system clipboard
+set ignorecase          " ignore casing
+set smartcase           " use smart casing with search
 
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
   set t_Co=256
