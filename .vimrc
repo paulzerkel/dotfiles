@@ -35,7 +35,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-sensible'
-Plugin 'pangloss/vim-javascript'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ap/vim-css-color'
