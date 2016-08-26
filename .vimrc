@@ -8,6 +8,7 @@ set go=aAce             " gui options
 set mouse=a             " because i like mousewheel scrolling
 set number              " show line numbers
 set list                " show whitespace
+set cursorline          " show what line the cursor is on
 
 " just tab things
 set smartindent
