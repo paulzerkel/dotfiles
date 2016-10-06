@@ -61,7 +61,7 @@ filetype plugin indent on
 
 syntax enable
 set background=dark
-colorscheme base16-solarized
+colorscheme base16-solarized-dark
 highlight SpecialKey term=underline ctermfg=8 ctermbg=10 guifg=#657b83 guibg=#073642
 set listchars=tab:»\ ,trail:·
 
