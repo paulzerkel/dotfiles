@@ -44,6 +44,8 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'scrooloose/syntastic'
 Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
@@ -75,5 +77,11 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
+
+" Neocomplete settings
+let g:neocomplete#enable_at_startup = 1
+
+" Vim-go settings
+let g:go_fmt_command = "goimports"
 
 runtime! plugin/sensible
