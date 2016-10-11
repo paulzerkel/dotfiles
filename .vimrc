@@ -9,6 +9,9 @@ set mouse=a             " because i like mousewheel scrolling
 set number              " show line numbers
 set list                " show whitespace
 set cursorline          " show what line the cursor is on
+set scrolloff=5         " keep 5 lines around the cursor
+set ttyfast             " fast!
+set hidden              " hidden buffers
 
 " just tab things
 set smartindent
