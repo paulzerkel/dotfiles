@@ -1,3 +1,8 @@
+shopt -s histappend
+HISTCONTROL=ignoreboth
+HISTSIZE=10000
+HISTFILESIZE=10000000
+
 # aliases
 alias ls="ls -GFlash"
 
@@ -9,5 +14,3 @@ if [[ $(uname) == "Darwin" ]]; then
   fi
 fi
 
-# exports
-export HISTFILESIZE=10000000
