@@ -39,13 +39,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-sensible'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ap/vim-css-color'
-Plugin 'chriskempson/base16-vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'scrooloose/syntastic'
 Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
+Plugin 'chriskempson/base16-vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'fatih/vim-go'
 
@@ -64,10 +63,16 @@ filetype plugin indent on
 " Put your non-Plugin stuff after this line
 
 syntax enable
-set background=dark
-colorscheme base16-solarized-dark
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+else
+  set background=dark
+  colorscheme base16-solarized-dark
+endif
+
 highlight SpecialKey term=underline ctermfg=8 ctermbg=10 guifg=#657b83 guibg=#073642
-set listchars=tab:Â»\ ,trail:Â·
+set listchars=tab:»\ ,trail:·
 
 " Syntastic settings
 set statusline+=%#warningmsg#
